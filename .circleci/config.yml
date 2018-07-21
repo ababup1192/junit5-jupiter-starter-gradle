@@ -6,6 +6,8 @@ jobs:
       - image: java:openjdk-8u111-jdk-alpine
     working_directory: ~/repo
     steps:
+      - run: ls
+      - run: pwd
       - run: ./gradlew test
 
 workflows:
