@@ -1,0 +1,14 @@
+# .circleci/config.yml for CircleCI 2.0
+version: 2
+jobs:
+  java8:
+    docker:
+      - image: java:openjdk-8u111-jdk-alpine
+    steps:
+      - run: ./gradlew test
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - java8
